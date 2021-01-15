@@ -1,3 +1,9 @@
+<a class="item @if(in_array($routeName, ['administrator.dashboard.index', 'administrator.dashboard.show'])) active @endif"
+   href="{{ route('dashboard') }}">
+    <i class="left dashboard icon"></i>
+    {{ __('Dashboard') }}
+</a>
+
 <a class="item @if(in_array($routeName, ['administrator.contact-person.index', 'administrator.contact-person.show'])) active @endif"
    href="{{ route('administrator.contact-person.index') }}">
     <i class="left user icon"></i>
