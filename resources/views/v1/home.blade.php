@@ -1,0 +1,1 @@
+@extends('v1.layouts.dashboard')

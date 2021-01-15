@@ -1,0 +1,1 @@
+@include('administrator.cycle.indicator')

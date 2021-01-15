@@ -1,0 +1,32 @@
+.ribbon-sub-segment {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+}
+
+:first-child.ribbon-sub-segment {
+    margin-top: 0 !important;
+}
+
+.ui.vertical.menu .item > i.icon.left {
+    float: none;
+    margin: 0 0.8em 0 0;
+}
+
+.ui.vertical.menu > .item {
+    width: 100%;
+}
+
+.ui.vertical.menu {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.ui.table tr.purple {
+    background: #f3e5f5 !important;
+    color: #4a148c !important;
+}
+
+.ui.table tr.blue {
+    background: #e3f2fd !important;
+    color: #1565c0 !important;
+}

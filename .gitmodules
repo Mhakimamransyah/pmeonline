@@ -1,0 +1,7 @@
+[submodule "public/toastr"]
+	path = public/toastr
+	url = https://github.com/naufalfachrian/toastr.git
+	branch = pme-web
+[submodule "public/semantic-ui"]
+	path = public/semantic-ui
+	url = https://github.com/naufalfachrian/semantic-ui.git

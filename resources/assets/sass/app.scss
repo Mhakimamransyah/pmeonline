@@ -1,0 +1,37 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+@import "~toastr";
+
+@import "~semantic-ui-css/semantic.min.css";
+
+//@import "grid.css";
+
+@import "semantic-ui-fix.css";
+
+@import "~datatables.net-se";
+
+.pme.dashboard {
+  min-height: calc(100% - 48px);
+}
+
+.ui.secondary.menu {
+  margin: 0;
+  padding: 12px;
+}
+
+.toggled {
+  margin-left: 260px !important;
+}
+
+.ui.sidebar.left {
+  background-color: $green;
+}
+
+#main-content {
+  padding: 32px;
+}
