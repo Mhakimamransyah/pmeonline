@@ -61,3 +61,23 @@
     <i class="left linkify icon"></i>
     {{ __('Kaitan Daftar ke Paket') }}
 </a>
+
+<br/>
+
+<a class="item @if(\Illuminate\Support\Str::contains($routeName, 'administrator.schedule')) active @endif"
+   href="{{ route('administrator.schedule.index') }}">
+    <i class="left history icon"></i>
+    {{ __('Jadwal PNPME') }}
+</a>
+
+<a class="item @if(\Illuminate\Support\Str::contains($routeName, 'administrator.rate')) active @endif"
+   href="{{ route('administrator.rate.index') }}">
+    <i class="left dollar sign icon"></i>
+    {{ __('Info Tarif') }}
+</a>
+
+<a class="item @if(\Illuminate\Support\Str::contains($routeName, 'administrator.news')) active @endif"
+   href="{{ route('administrator.news.index') }}">
+    <i class="left bullhorn icon"></i>
+    {{ __('Berita') }}
+</a>

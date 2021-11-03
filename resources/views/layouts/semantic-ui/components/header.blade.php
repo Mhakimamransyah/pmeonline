@@ -8,6 +8,12 @@
         </a>
         <div class="right menu">
             @guest
+                <a href="{{ route('rate') }}" class="item @if($route_name == 'rate') active @endif">
+                    Info Tarif
+                </a>
+                <a href="{{ route('schedule') }}" class="item @if($route_name == 'schedule') active @endif">
+                    Jadwal PME
+                </a>
                 <a href="{{ route('register') }}" class="item @if($route_name == 'register') active @endif">
                     Pendaftaran
                 </a>

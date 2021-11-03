@@ -21,6 +21,14 @@ Route::get('/form', function () {
     return view('form.pnpme-ur');
 });
 
+// Route::get('/schedule', function () {
+//     return view('schedule');
+// });
+
+Route::get('/schedule', 'ScheduleController@index')->name('schedule');
+
+Route::get('/rate', 'RateController@index')->name('rate');
+
 Auth::routes();
 
 Route::prefix('auth')->group(function () {
@@ -266,6 +274,41 @@ Route::prefix('administrator')->group(function () {
         });
 
     });
+// -----------------------------------------------------------------------------------------------------------------------------------------
+    Route::prefix('schedule')->group(function () {
+
+        Route::get('', 'Administrator\ScheduleController@index')->name('administrator.schedule.index');
+        Route::post('create', 'Administrator\ScheduleController@create')->name('administrator.schedule.create');
+        Route::get('edit/{id}','Administrator\ScheduleController@edit')->name('administrator.schedule.edit');;
+        Route::post('update','Administrator\ScheduleController@update')->name('administrator.schedule.update');;
+        Route::get('hapus/{id}','Administrator\ScheduleController@hapus')->name('administrator.schedule.hapus');;
+
+    });
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------------------------------------------------------------------
+    Route::prefix('rate')->group(function () {
+
+        Route::get('', 'Administrator\RateController@index')->name('administrator.rate.index');
+        Route::post('create', 'Administrator\RateController@create')->name('administrator.rate.create');
+        Route::get('edit/{id}','Administrator\RateController@edit')->name('administrator.rate.edit');;
+        Route::post('update','Administrator\RateController@update')->name('administrator.rate.update');;
+        Route::get('destroy/{id}','Administrator\RateController@destroy')->name('administrator.rate.destroy');;
+
+    });
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------------------------------------------------------------------
+    Route::prefix('news')->group(function () {
+
+        Route::get('', 'Administrator\NewsController@index')->name('administrator.news.index');
+        Route::post('create', 'Administrator\NewsController@create')->name('administrator.news.create');
+        Route::get('edit/{id}','Administrator\NewsController@edit')->name('administrator.news.edit');;
+        Route::post('update','Administrator\NewsController@update')->name('administrator.news.update');;
+        Route::get('destroy/{id}','Administrator\NewsController@destroy')->name('administrator.news.destroy');;
+
+    });
+// ------------------------------------------------------------------------------------------------------------------------------------------
 
     Route::prefix('inject')->group(function () {
 
@@ -282,6 +325,7 @@ Route::prefix('administrator')->group(function () {
         });
 
     });
+
 
     Route::prefix('payment')->group(function () {
 
@@ -486,6 +530,24 @@ Route::prefix('participant')->group(function () {
     Route::prefix('survey')->group(function () {
 
         Route::get('', 'Participant\SurveyController@index')->name('participant.survey.index');
+
+    });
+
+    Route::prefix('schedule')->group(function () {
+
+        Route::get('', 'Participant\ScheduleController@index')->name('participant.schedule.index');
+
+    });
+
+    Route::prefix('rate')->group(function () {
+
+        Route::get('', 'Participant\RateController@index')->name('participant.rate.index');
+
+    });
+
+    Route::prefix('news')->group(function () {
+
+        Route::get('show', 'Participant\NewsController@show')->name('participant.news.show');
 
     });
 
@@ -724,3 +786,4 @@ Route::prefix('vue')->group(function () {
     });
 
 });
+

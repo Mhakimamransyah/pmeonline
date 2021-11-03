@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Role;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -38,6 +39,11 @@ class DashboardController extends Controller
 
     public function asParticipant()
     {
-        return view('participant.home');
+        $news = DB::table('news')->get();
+        $cycle = DB::table('cycles')->get();
+        return view('participant.home', [
+            'news' => $news,
+            'cycle' => $cycle
+        ]);
     }
 }

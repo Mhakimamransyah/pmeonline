@@ -1,3 +1,9 @@
+<a class="item @if($routeName == 'participant.dashboard.show') active @endif"
+   href="{{ route('dashboard') }}">
+    <i class="left dashboard icon"></i>
+    {{ __('Dashboard') }}
+</a>
+
 <a class="item @if($routeName == 'participant.profile.show') active @endif"
    href="{{ route('participant.profile.show') }}">
     <i class="left user icon"></i>
@@ -62,4 +68,16 @@
    href="{{ route('participant.survey.index') }}">
     <i class="left edit outline icon"></i>
     {{ __('Survey') }}
+</a>
+
+<a class="item @if($routeName == 'participant.schedule.index') active @endif"
+   href="{{ route('participant.schedule.index') }}">
+    <i class="left history icon"></i>
+    {{ __('Jadwal PNPME') }}
+</a>
+
+<a class="item @if($routeName == 'participant.rate.index') active @endif"
+   href="{{ route('participant.rate.index') }}">
+    <i class="left dollar sign icon"></i>
+    {{ __('Info Tarif') }}
 </a>
